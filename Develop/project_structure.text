@@ -1,0 +1,30 @@
+- .eslintrc.cjs
+- .gitignore
+- environment
+  - .env.EXAMPLE
+- index.html
+- package.json
+- project_structure.text
+- public
+  - vite.svg
+- README.md
+- src
+  - api
+    - API.tsx
+  - App.tsx
+  - assets
+    - react.svg
+  - components
+    - Nav.tsx
+  - index.css
+  - interfaces
+    - Candidate.interface.tsx
+  - main.tsx
+  - pages
+    - CandidateSearch.tsx
+    - ErrorPage.tsx
+    - SavedCandidates.tsx
+  - vite-env.d.ts
+- tsconfig.json
+- tsconfig.node.json
+- vite.config.ts
