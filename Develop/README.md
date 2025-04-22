@@ -1,33 +1,96 @@
-# React + TypeScript + Vite
+# Candidate Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and TypeScript SPA that fetches GitHub user profiles, lets you save potential candidates, and review or remove them later. The app uses the GitHub REST API with a Personal Access Token to avoid rate limits, persists data in localStorage, and is deployed on Render.
 
-Currently, two official plugins are available:
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Access the live application:
 
-* Configure the top-level `parserOptions` property as follows:
+https://<YOUR_RENDER_URL>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Features
+
+Fetches random GitHub users via GitHub API
+
+Displays user details: name, username, avatar, location, email, company, and profile link
+
+➕ Accept to save a candidate in browser localStorage
+
+➖ Reject to skip to the next candidate
+
+Persistent storage of accepted candidates across page reloads
+
+View and remove saved candidates on a dedicated page
+
+
+
+
+## Installation
+
+1. Clone the repository
+
+git clone https://github.com/<YOUR_GITHUB_USERNAME>/candidate-search-app.git
+
+2. Navigate into the project directory
+
+cd candidate-search-app
+
+3. Install dependencies
+
+npm install
+
+
+
+## Configuration
+
+1. Rename the environment folder to env
+
+mv environment env
+
+2. Create a .env file inside env/
+
+touch env/.env
+
+3. Add your GitHub Personal Access Token:
+
+VITE_GITHUB_TOKEN=ghp_<YOUR_TOKEN_HERE>
+
+
+
+## Usage
+
+Start the development server:
+
+npm run dev
+
+Open your browser at http://localhost:5173
+
+
+
+## Environment Variables
+
+VITE_GITHUB_TOKEN={GitHub Personal Access Token(prefixed ghp_…)}
+
+
+
+## Tech Stack
+
+- React (with Hooks and react-router-dom)
+
+- TypeScript for static typing
+
+- Vite as the build tool and dev server
+
+- GitHub REST API for fetching user data
+
+- Render for deployment
+
+
+
+## License
+
+This project is licensed under the MIT License.
